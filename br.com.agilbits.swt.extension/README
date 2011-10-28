@@ -1,0 +1,7 @@
+To build:
+
+git clone org.mockito.plugin
+
+1- Go to Eclipse Preferences > Java > Build Path > User Libraries
+2- Create a new "SWT" library linked to org.eclise.swt_your_platform.jar
+

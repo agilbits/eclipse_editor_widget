@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: SWT Extension Tests
+Bundle-SymbolicName: br.com.agilbits.swt.extension.tests
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: O2 Filmes
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit;bundle-version="4.8.1",
+ org.mockito.plugin;bundle-version="1.8.5",
+ org.eclipse.swt;bundle-version="3.7.1"
+Export-Package: br.com.agilbits.swt.extension.paginator,
+ org.eclipse.swt.custom

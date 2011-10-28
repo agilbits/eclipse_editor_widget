@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: %vendor
+Bundle-SymbolicName: br.com.agilbits.swt.extension
+Bundle-Vendor: %name
+Bundle-Localization: swt-extension-fragment
+Fragment-Host: org.eclipse.swt;bundle-version="3.7.1.v3738a"
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Export-Package: br.com.agilbits.swt.extension.paginator,
+ br.com.agilbits.swt.extension.zoom

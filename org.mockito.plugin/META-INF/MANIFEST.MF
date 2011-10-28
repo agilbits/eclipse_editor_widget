@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Mockito
+Bundle-SymbolicName: org.mockito.plugin
+Bundle-Version: 1.8.5
+Bundle-Vendor: szczepiq
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ClassPath: lib/mockito-all-1.8.5.jar
+Export-Package: org.hamcrest,
+ org.hamcrest.core,
+ org.mockito,
+ org.mockito.exceptions,
+ org.mockito.invocation,
+ org.mockito.runners,
+ org.mockito.stubbing,
+ org.mockito.stubbing.answers,
+ org.mockito.verification

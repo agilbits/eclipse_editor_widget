@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="br.com.agilbits.sample.app.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="br.com.agilbits.sample.app.Perspective"
+            id="br.com.agilbits.sample.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="file"
+               mnemonic="f">
+            <command
+                  commandId="open"
+                  mnemonic="O"
+                  style="push">
+            </command>
+            <command
+                  commandId="our.print"
+                  label="Print"
+                  mnemonic="P"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="AddHelloWorld">
+            <command
+                  commandId="ExtendedStyledTextRCP.addHelloWorld"
+                  label="Add Hello World"
+                  style="push">
+            </command>
+            <command
+                  commandId="changeFont"
+                  label="Change font..."
+                  style="push">
+            </command>
+            <command
+                  commandId="changeZoom"
+                  label="Change Zoom"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="br.com.agilbits.sample.OpenHandler"
+            description="Open editor with sample content"
+            id="open"
+            name="Open sample editor">
+      </command>
+      <command
+            defaultHandler="br.com.agilbits.sample.command.AddHelloWorld"
+            id="ExtendedStyledTextRCP.addHelloWorld"
+            name="Add Hello World">
+      </command>
+      <command
+            defaultHandler="br.com.agilbits.sample.command.Print"
+            id="our.print"
+            name="Print">
+      </command>
+      <command
+            defaultHandler="br.com.agilbits.sample.command.ChangeFont"
+            description="Opens a dialog to change font"
+            id="changeFont"
+            name="Change Font">
+      </command>
+      <command
+            defaultHandler="br.com.agilbits.sample.command.ChangeZoom"
+            description="Changes the zoom to random"
+            id="changeZoom"
+            name="Change Zoom">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="br.com.agilbits.sample.SampleEditor"
+            default="false"
+            extensions="txt"
+            id="ExtendedStyledTextRCP.editor1"
+            name="Sample Editor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors.documentProviders">
+      <provider
+            class="br.com.agilbits.sample.SampleDocumentProvider"
+            id="ExtendedStyledTextRCP.provider1"
+            inputTypes="br.com.agilbits.sample.SampleEditorInput">
+      </provider>
+   </extension>
+   <extension
+         point="org.eclipse.ui.elementFactories">
+      <factory
+            class="br.com.agilbits.sample.SampleEditorInputFactory"
+            id="br.com.agilbits.sample.SampleEditorInputFactory">
+      </factory>
+   </extension>
+
+</plugin>
